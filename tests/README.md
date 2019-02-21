@@ -23,4 +23,4 @@ Finally, to test whether or not ![equation](https://latex.codecogs.com/gif.latex
 
 ![equation](https://latex.codecogs.com/gif.latex?S_{\hat{\rho_k}}&space;=&space;\sqrt{\frac{1}{T}})
 
-![ACF of White Noise Process](https://github.com/juancop/ts_models/tree/develop/tests/images/acf_wn.png)
+![ACF of White Noise Process](https://github.com/juancop/ts_models/blob/develop/tests/images/acf_wn.png)

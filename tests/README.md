@@ -9,4 +9,16 @@ If you have read anything about Time Series, you might have heard the terms ACF 
 ### Autocovariance and Autocorrelation 
 Suppose that you have a series ![equation](https://latex.codecogs.com/gif.latex?y_t&space;\sim&space;(0,&space;\sigma^2_y)). Its autocovariance  ![equation](https://latex.codecogs.com/gif.latex?k) periods before is 
 
-<p align="center"> ![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-1})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-1}\big]) </p>
+![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-1})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-1}\big])
+
+Since we are interested in the autocorrelation, we divide the covariance over the standard deviation of both ![equation](https://latex.codecogs.com/gif.latex?y_t) and ![equation](https://latex.codecogs.com/gif.latex?y_{t-k}). 
+
+![equation](https://latex.codecogs.com/gif.latex?\rho_k&space;=&space;\frac{\operatorname{cov}(y_t,&space;y_{t-1})}{\sqrt{\mathbb{V}(y_t)}&space;\sqrt{\mathbb{V}(y_{t-1})}}&space;=&space;\frac{\gamma_k}{\gamma_0})
+
+In order to approximate to the ACF, we use the sample ACF computing ![equation](https://latex.codecogs.com/gif.latex?\gamma_k) as follows, 
+
+![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\frac{1}{T}&space;\sum_{t=1}^{T-k}&space;(y_t&space;-&space;\bar{Y})(y_{t-k}&space;-&space;\bar{Y}))
+
+To test whether or not ![equation](https://latex.codecogs.com/gif.latex?y_t) is a white noise process, one might use the following standard deviation, 
+
+![equation]https://latex.codecogs.com/gif.latex?S_{\hat{\rho_k}}&space;=&space;\sqrt{\frac{1}{T}})

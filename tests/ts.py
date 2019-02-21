@@ -74,15 +74,22 @@ def acf(y, max_lags, barlett_ci = False, display = True):
             acf (list): ACF values. 
             sd (list): Standard Deviation of the ACF.
     
-    """
-    if type(y) == list:
-        y = pd.DataFrame(y)
-    elif y == pd.core.frame.DataFrame:
+    """    
+    
+    if type(y) == list or type(y) == np.ndarray:
+        y = pd.Series(y)
+    elif (y == pd.core.frame.DataFrame) or (y == pd.core.series.Series):
         pass
     else: 
-        print("Type {} not supported.".format(type(y)))
-    mean = y.mean()[0]
-    var = y.var()[0]
+        raise ValueError("Type {} not supported".format(type(y)))
+        
+    try:
+        mean = y.mean()[0]
+        var = y.var()[0]
+    except:
+        mean = y.mean()
+        var = y.var()
+        
     _acf = []
     T = len(y)
     for p in range(max_lags+1):
@@ -101,14 +108,7 @@ def acf(y, max_lags, barlett_ci = False, display = True):
     for x1, x2 in zip(range(max_lags+1), _acf):
         coords.append([(x1, 0), (x1, x2)])
     if display:
-        lc = mc.LineCollection(coords, linewidths=1, color = "black")
-        fig, ax = pl.subplots()
-        ax.add_collection(lc)
-        ax.autoscale()
-        ax.axhline(y=0, xmin=0.0, xmax=1, color = "black", linewidth = 1)
-        ax.plot(lw_ci, linestyle = "--", color = "blue", linewidth = 1)
-        ax.plot(up_ci, linestyle = "--", color = "blue", linewidth = 1)
-        ax.scatter(range(max_lags+1), _acf)
+        plot_coord(coords, up_ci, lw_ci, "Autocorrelation Function (ACF)", max_lags, _acf)
         
         return _acf
     else:

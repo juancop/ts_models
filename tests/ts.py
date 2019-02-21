@@ -100,15 +100,16 @@ def acf(y, max_lags, barlett_ci = False, display = True):
         _acf.append(mult)
     if barlett_ci:
         sd = barlett(T, _acf)
+        title = "Autocorrelation Function (ACF) [Using Barlett's Equation]"
     else:
         sd = [np.sqrt(1/T)]*(max_lags+1)
-    
+        title = "Autocorrelation Function (ACF)"
     up_ci, lw_ci = [1.96*x for x in sd], [-1.96*x for x in sd]
     coords = []
     for x1, x2 in zip(range(max_lags+1), _acf):
         coords.append([(x1, 0), (x1, x2)])
     if display:
-        plot_coord(coords, up_ci, lw_ci, "Autocorrelation Function (ACF)", max_lags, _acf)
+        plot_coord(coords, up_ci, lw_ci, title, max_lags, _acf)
         
         return _acf
     else:

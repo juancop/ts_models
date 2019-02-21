@@ -21,4 +21,4 @@ In order to approximate to the ACF, we use the sample ACF computing ![equation](
 
 To test whether or not ![equation](https://latex.codecogs.com/gif.latex?y_t) is a white noise process, one might use the following standard deviation, 
 
-![equation]https://latex.codecogs.com/gif.latex?S_{\hat{\rho_k}}&space;=&space;\sqrt{\frac{1}{T}})
+![equation](https://latex.codecogs.com/gif.latex?S_{\hat{\rho_k}}&space;=&space;\sqrt{\frac{1}{T}})

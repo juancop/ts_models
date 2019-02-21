@@ -19,6 +19,8 @@ In order to approximate to the ACF, we use the sample ACF computing ![equation](
 
 ![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\frac{1}{T}&space;\sum_{t=1}^{T-k}&space;(y_t&space;-&space;\bar{Y})(y_{t-k}&space;-&space;\bar{Y}))
 
-To test whether or not ![equation](https://latex.codecogs.com/gif.latex?y_t) is a white noise process, one might use the following standard deviation, 
+Finally, to test whether or not ![equation](https://latex.codecogs.com/gif.latex?y_t) is a white noise process, we might use the following standard deviation (even thought we will later use some other tests), 
 
 ![equation](https://latex.codecogs.com/gif.latex?S_{\hat{\rho_k}}&space;=&space;\sqrt{\frac{1}{T}})
+
+![ACF of White Noise Process](https://github.com/juancop/ts_models/tree/develop/tests/images/acf_wn.png)

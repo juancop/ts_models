@@ -6,4 +6,7 @@ In this section I will describe the functions I've implemented so far. I will gi
 
 If you have read anything about Time Series, you might have heard the terms ACF (Autocorrelation Function) and PACF (Partial Autocorrelation Function). With this functions we can identify linear relationships (correlations) between a tieme series and itself k periods before. 
 
-Suppose that you have a series ![equation](https://latex.codecogs.com/gif.latex?y_t)
+### Autocovariance and Autocorrelation 
+Suppose that you have a series ![equation](https://latex.codecogs.com/gif.latex?y_t&space;\sim&space;(0,&space;\sigma^2_y). Its autocovariance  ![equation](https://latex.codecogs.com/gif.latex?k) periods before is 
+
+![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-1})

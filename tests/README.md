@@ -9,11 +9,11 @@ If you have read anything about Time Series, you might have heard the terms ACF 
 ### Autocovariance and Autocorrelation 
 Suppose that you have a series ![equation](https://latex.codecogs.com/gif.latex?y_t&space;\sim&space;(0,&space;\sigma^2_y)). Its autocovariance  ![equation](https://latex.codecogs.com/gif.latex?k) periods before is 
 
-![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-k})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-1}\big])
+![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-k})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-k}\big])
 
 Since we are interested in the autocorrelation, we divide the covariance over the standard deviation of both ![equation](https://latex.codecogs.com/gif.latex?y_t) and ![equation](https://latex.codecogs.com/gif.latex?y_{t-k}). 
 
-![equation](https://latex.codecogs.com/gif.latex?\rho_k&space;=&space;\frac{\operatorname{cov}(y_t,&space;y_{t-1})}{\sqrt{\mathbb{V}(y_t)}&space;\sqrt{\mathbb{V}(y_{t-1})}}&space;=&space;\frac{\gamma_k}{\gamma_0})
+![equation](https://latex.codecogs.com/gif.latex?\rho_k&space;=&space;\frac{\operatorname{cov}(y_t,&space;y_{t-k})}{\sqrt{\mathbb{V}(y_t)}&space;\sqrt{\mathbb{V}(y_{t-k})}}&space;=&space;\frac{\gamma_k}{\gamma_0})
 
 In order to approximate to the ACF, we use the sample ACF computing ![equation](https://latex.codecogs.com/gif.latex?\gamma_k) as follows, 
 

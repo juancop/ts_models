@@ -9,4 +9,4 @@ If you have read anything about Time Series, you might have heard the terms ACF 
 ### Autocovariance and Autocorrelation 
 Suppose that you have a series ![equation](https://latex.codecogs.com/gif.latex?y_t&space;\sim&space;(0,&space;\sigma^2_y)). Its autocovariance  ![equation](https://latex.codecogs.com/gif.latex?k) periods before is 
 
-<center> ![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-1})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-1}\big]) <center/>
+<p align="center"> ![equation](https://latex.codecogs.com/gif.latex?\gamma_k&space;=&space;\operatorname{cov}(y_t,&space;y_{t-1})&space;=&space;\mathbb{E}&space;\big[y_t&space;y_{t-1}\big]) </p>
